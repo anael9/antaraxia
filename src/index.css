@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300&display=swap');
+@import 'tailwindcss';
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(.78); opacity: .72; }
+  25% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1); opacity: 1; }
+  75% { transform: scale(.78); opacity: .72; }
+}
+
+.breathing-orb {
+  animation: breathe 16s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
